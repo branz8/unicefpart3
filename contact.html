@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> <!-- Link to your JavaScript file -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://th.bing.com/th/id/OIP.9Fdi-OiKfAd3I29IaESRrQHaEy?w=288&h=187&c=7&r=0&o=5&pid=1.7" alt="UNICEF Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="donation.html">Donate</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="map.html">Interactive Map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us. We are here to help and answer any inquiries you may have about UNICEF's programs, donations, or partnerships.</p>
+
+        <div class="contact-form">
+            <form onsubmit="return validateForm()" method="POST" action="mailto:info@unicef.org">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Your message subject">
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Write your message..."></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <h3>Other Ways to Contact Us</h3>
+            <p><strong>Email:</strong> info@unicef.org</p>
+            <p><strong>Phone:</strong> +1 (800) 123-4567</p>
+            <p><strong>Address:</strong> 123 UNICEF Street, New York, NY, USA</p>
+            <p>We are also available on social media. Follow us for the latest updates on how you can help make a difference in the world.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Connect with us on social media:</p>
+        <div class="social-media">
+            <a href="#"><img src="https://th.bing.com/th/id/OIP.N24RC8dLPtIGYfPSlKsK7AHaHa?w=200&h=200&c=7&r=0&o=5&pid=1.7" alt="Facebook"></a>
+            <a href="#"><img src="https://th.bing.com/th/id/OIP.NrRbaTO75j744BamhdPR3gHaHa?w=172&h=182&c=7&r=0&o=5&pid=1.7" alt="Twitter"></a>
+            <a href="#"><img src="https://th.bing.com/th/id/OIP.NrRbaTO75j744BamhdPR3gHaHa?w=172&h=182&c=7&r=0&o=5&pid=1.7" alt="Instagram"></a>
+            <a href="#"><img src="https://1.bp.blogspot.com/-zaoiLHspoKI/XeI_0uFAeCI/AAAAAAAAF38/CyHgdY8bdOQ7d979yOJ0voSIA8b5bAF2wCLcBGAsYHQ/s1600/Youtube-Icon-2000x2000.png" alt="YouTube"></a>
+        </div>
+
+        <!-- Google Form for Newsletter Subscription -->
+        <div class="newsletter">
+            <h3>Receive our Newsletter</h3>
+            <iframe src="YOUR_GOOGLE_FORM_LINK_HERE" width="100%" height="500px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+
+        <p>&copy; 2024 UNICEF. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        // JavaScript validation function
+        function validateForm() {
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+
+            // Clear fields when clicked
+            [name, email].forEach(input => {
+                input.addEventListener('focus', () => {
+                    input.value = '';
+                });
+            });
+
+            // Validation
+            if (name.value.trim() === '') {
+                alert('Please enter your name.');
+                name.focus();
+                return false; // Prevent form submission
+            }
+            if (email.value.trim() === '') {
+                alert('Please enter your email.');
+                email.focus();
+                return false; // Prevent form submission
+            }
+            return true; // Allow form submission
+        }
+    </script>
+</body>
+</html>

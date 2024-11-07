@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNICEF - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://th.bing.com/th/id/OIP.9Fdi-OiKfAd3I29IaESRrQHaEy?w=288&h=187&c=7&r=0&o=5&pid=1.7" alt="UNICEF Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="donation.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="map.html">Interactive Map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to UNICEF</h1>
+        <p>We are committed to ensuring the rights of every child are upheld. Join us in making a difference.</p>
+        <a href="donation.html" class="hero-btn">Donate Now</a>
+    </section>
+
+    <section class="what-we-do">
+        <h2>What We Do</h2>
+        <div class="services">
+            <div class="service-item">
+                <h3>Education for All</h3>
+                <p>We ensure that children worldwide have access to quality education regardless of their circumstances. Over 500,000 children have been enrolled in schools through our initiatives.</p>
+            </div>
+            <div class="service-item">
+                <h3>Healthcare Services</h3>
+                <p>We provide life-saving healthcare solutions, including vaccinations, nutrition, and clean water access. This year alone, we reached 2 million children in need of medical care.</p>
+            </div>
+            <div class="service-item">
+                <h3>Emergency Relief</h3>
+                <p>Our emergency relief programs assist children affected by natural disasters, wars, and conflicts. UNICEF has responded to over 200 emergencies globally in the last decade.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="success-stories">
+        <h2>Success Stories</h2>
+        <div class="stories">
+            <div class="story">
+                <h3>Bringing Education to Refugees</h3>
+                <img src="https://th.bing.com/th/id/OIP.TpUhmWU59AnZ95lW4neynQHaE8?w=256&h=180&c=7&r=0&o=5&pid=1.7" alt="Education Story">
+                <p>UNICEF built schools in refugee camps, giving hope and opportunities to thousands of displaced children. Over 80,000 children have received education in conflict zones through these programs.</p>
+            </div>
+            <div class="story">
+                <h3>Ending Hunger in Africa</h3>
+                <img src="https://th.bing.com/th/id/OIP.rW-loNPpp6uWhkeWk3SDegHaE8?w=283&h=188&c=7&r=0&o=5&pid=1.7" alt="Hunger Relief">
+                <p>We distributed food and nutritional supplies to millions of children and families during the drought crisis in Africa. Our food distribution efforts have reduced malnutrition rates by 25%.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-feed">
+        <h2>Latest News</h2>
+        <div class="news-item">
+            <h3>UNICEF Expands Vaccination Programs</h3>
+            <p>UNICEF is launching a global vaccination initiative to ensure every child has access to life-saving vaccines.</p>
+            <button onclick="showMore(this)">Read More</button>
+            <div class="more-info">
+                <p>In partnership with WHO, UNICEF is expanding its efforts to deliver vaccines to remote regions. This initiative will save millions of lives by providing access to essential vaccines for diseases such as polio, measles, and more. Our goal is to reach 10 million children by the end of the year.</p>
+            </div>
+        </div>
+        <div class="news-item">
+            <h3>Education Programs in Conflict Zones</h3>
+            <p>UNICEF's educational programs aim to reach children affected by conflicts worldwide.</p>
+            <button onclick="showMore(this)">Read More</button>
+            <div class="more-info">
+                <p>Working in regions like Syria, South Sudan, and Yemen, UNICEF is focused on building schools, providing materials, and training teachers to help restore education in war-torn areas. Over 300 schools have been rebuilt, and 120,000 children are back in classrooms.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Connect with us on social media:</p>
+        <div class="social-media">
+            <a href="#"><img src="https://th.bing.com/th/id/OIP.N24RC8dLPtIGYfPSlKsK7AHaHa?w=200&h=200&c=7&r=0&o=5&pid=1.7" alt="Facebook"></a>
+            <a href="#"><img src="https://th.bing.com/th/id/OIP.NrRbaTO75j744BamhdPR3gHaHa?w=172&h=182&c=7&r=0&o=5&pid=1.7" alt="Twitter"></a>
+            <a href="#"><img src="https://clipartcraft.com/images/instagram-logo-transparent-background-2.png" alt="Instagram"></a>
+            <a href="#"><img src="https://1.bp.blogspot.com/-zaoiLHspoKI/XeI_0uFAeCI/AAAAAAAAF38/CyHgdY8bdOQ7d979yOJ0voSIA8b5bAF2wCLcBGAsYHQ/s1600/Youtube-Icon-2000x2000.png" alt="YouTube"></a>
+        </div>
+
+        <section class="newsletter">
+            <h3>Receive Our Newsletter</h3>
+            <form action="https://example.com/submit" method="post" target="_blank" class="newsletter-form">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <label>
+                    <input type="checkbox" name="subscribe"> Please send me your weekly newsletter
+                </label>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+
+        <p>&copy; 2024 UNICEF. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showMore(button) {
+            var moreInfo = button.nextElementSibling;
+            if (moreInfo.style.display === "block") {
+                moreInfo.style.display = "none";
+                button.textContent = "Read More";
+            } else {
+                moreInfo.style.display = "block";
+                button.textContent = "Read Less";
+            }
+        }
+    </script>
+</body>
+</html>
